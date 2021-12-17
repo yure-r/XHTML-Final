@@ -1,0 +1,461 @@
+/* styles */
+/* called by your view template */
+
+@font-face {
+  font-family: one;
+  src: url(1.otf);
+}
+
+@font-face {
+  font-family: two;
+  src: url(2.otf);
+}
+
+/* @font-face {
+  font-family: three;
+  src: url(3.otf);
+}
+
+@font-face {
+  font-family: four;
+  src: url(4.otf);
+}
+
+@font-face {
+  font-family: five;
+  src: url(5.otf);
+}
+
+@font-face {
+  font-family: six;
+  src: url(6.otf);
+}
+
+@font-face {
+  font-family: seven;
+  src: url(7.otf);
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  overflow-x: hidden;
+/*   margin: 2em; */
+}
+
+header h1{
+text-align: center;
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    width: fit-content;
+    margin: auto;
+  margin-top: 40px;
+}
+
+h1 {
+/*   font-style: italic; */
+/*   color: #373fff; */
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  max-width: 600px;
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #57068c;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 3px;
+}
+
+input, textarea, select, label {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  height: fit-content;
+/*   width: 100%; */
+/*   border: 1px solid lightgrey; */
+  border-radius: 3px;
+  font-size: 16px;
+  font-family:"Gotham SSm A", "Gotham SSm B", sans-serif;
+}
+
+label {
+    background-color: transparent;
+    color: white;
+    width: fit-content;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+textarea {
+  min-height:100px;
+}
+
+button {
+font-size: 16px;
+    border-radius: 3px;
+    background-color: white;
+    color: #57068c;
+    border: 1px solid grey;
+    /* box-shadow: 2px 2px teal; */
+    cursor: pointer;
+}
+
+button:hover {
+  background-color: #330662;
+  color: white;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 15px;
+  padding-top: 0;
+/*   border-top: 1px solid lightgrey; */
+}
+
+nav ul {
+  padding:0;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;  
+}
+
+#nyulogo{
+  margin-bottom:12px;
+  fill:white;
+}
+
+body{
+  background-color: #57068c;
+}
+
+.main-footer .footer-bottom-wrapper {
+    background: #000;
+}
+
+.main-footer .footer-bottom-wrapper .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+select{
+      -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fbfbfb url(clientlib/assets/img/select_input_caret.png) no-repeat center right 0.75rem;
+    font: 400 0.86667rem "Gotham SSm A", "Gotham SSm B", sans-serif;
+    color: #5c5c5c;
+    padding: 0 2rem 0 0.45rem;
+    height: 3rem;
+    line-height: 2rem;
+    border: 1px solid #ddd4d4;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    margin-bottom: 1rem;
+}
+
+.schoolenter {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    line-height: 30px;
+    color: white;
+    margin-left: 5px;
+    margin-top: 18px;
+}
+
+#edit{
+    width: 80vw;
+    max-width: unset;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  color:white;
+}
+
+#login{
+  text-align: center;
+}
+
+#login form{
+  
+}
+
+#login form label{
+  margin:auto;
+}
+
+#login form input{
+  margin:auto;
+}
+
+ul#data {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+  text-align:center;
+}
+
+main{
+  width: 100vw;
+}
+
+main ul:not([class]) li::before, main ul.bullet-list-list li::before, main ul.list-with-descriptions-list li::before, .sidebar ul:not([class]) li::before, .sidebar ul.bullet-list-list li::before, .sidebar ul.list-with-descriptions-list li::before {
+    color: #57068c;
+    display: inline-block;
+    margin-left: -1.5rem;
+    width: 100vw;
+}
+
+.channel main {
+    display: unset;
+    grid-template-columns: 1rem auto 1rem;
+    grid-template-areas:
+        "breadcrumb breadcrumb breadcrumb"
+        "alert alert alert"
+        "intro intro intro"
+        "title title title"
+        ". sidenav ."
+        "main-content main-content main-content";
+}
+
+#datum{
+  display: none;
+}
+
+#dropdowncontainer select{
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+/*     background: transparent; */
+     background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 2px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 0rem;
+    padding-left: 10px;
+    padding-right: 2rem;
+    width: fit-content;
+    height: 2rem;
+}
+
+input#name {
+    margin-top: -2px;
+}
+
+input#author {
+    margin-top: -3px;
+}
+
+
+
+#preDatum {
+    margin-left: 0px;
+    margin-top: -1px;
+    margin-bottom: 0px;
+}
+
+select#NamedSchools {
+    margin-left: 0px;
+}
+
+div#dropdowncontainer {
+    height: fit-content;
+    height: 0px;
+}
+
+#dropdowncontainer:before {
+/*     content: "";
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f00; */
+}
+
+#dropdowncontainer:after {
+/*     content: '\21E9';
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #0ebeff;
+    right: 11px;
+    top: 6px;
+    height: 34px;
+    padding: 15px 0px 0px 8px;
+    border-left: 1px solid #0ebeff;
+    position: absolute;
+    pointer-events: none; */
+}
+
+#addschool{
+  font-size:24px;
+  text-align:center;
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+}
+
+#add{
+  text-align:center;
+}
+
+#addcontainer {
+    background-color: #3d0462;
+    position: sticky;
+    top: calc( 100vh - 70px );
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: -20px;
+    text-align: center;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+button#submit {
+    margin: auto;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%;
+    /* height: 53px; */
+    line-height: 50px;
+      font-weight: 700;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    display: block;
+    padding: 1rem 0.666666666666667rem;
+    font: 400 1rem "Gotham SSm A", "Gotham SSm B", sans-serif;
+    color: #5c5c5c;
+    background: #fbfbfb;
+    border: 1px solid #ddd4d4;
+    height: 2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 0;
+    margin: 0.33333333333333rem 0 0.666666666666667rem;
+    -webkit-appearance: none;
+}
+
+.FULL{
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.fullname{
+  margin-right:10px;
+}
+
+span {
+    margin-left: 20px;
+    color: white;
+}
+
+main ul li, main ol li, .sidebar ul li, .sidebar ol li {
+    line-height: 150%;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.thankyoutext{
+    font-size: 1.5rem;
+    width: 60vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#homelinkbottom{
+  margin-right:10px;
+}
+
+textarea#preDatum {
+    margin-top: 40px;
+  width:100%;
+}
+
+textarea#name {
+    width: 100%;
+  display:none;
+}
+
+@media screen and (max-width:600px){
+main ul li, main ol li, .sidebar ul li, .sidebar ol li {
+    line-height: 150%;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+  
+  .schoolenter{
+    flex-wrap: wrap;
+  }
+  
+  .FULL{
+    height: 85px;
+    margin-left: 10px;
+    /* text-align: center; */
+    display: block;
+  }
+  
+  label.fullname {
+    margin-left: -5px;
+}
+  
+}
+
+@media screen and (max-width: 410px){
+  select#NamedSchools {
+   font-size: 10px;
+}
+}
+
+@media screen and (max-width: 338px){
+  select#NamedSchools {
+   font-size: 8px;
+}
+}

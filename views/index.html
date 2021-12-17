@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Cooper Union SQLite Demo!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="/nyufavwithwhite.svg" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+
+    <link rel="stylesheet" href="/clientlib.css">
+        <link rel="stylesheet" href="/nyufonts.css">
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/crud.js" defer></script>
+  </head>
+  <body class=" GN-mquery-desktop channel">
+    <header>
+      <h1>
+        <svg id="nyulogo" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 135 46" width="135" height="46"><path class="cls-1" d="M57.88,9.71h5.28l12.26,16v-16H81V35.78H76.1L63.5,19.08v16.7H57.88Z"/><path class="cls-1" d="M94,25.56l-10-15.85h6.64l6.3,10.56,6.3-10.56h6.46l-10,15.68V35.78H93.8V25.56Z"/><path class="cls-1" d="M112.19,24.7v-15H118V24.53c0,4.26,2,6.48,5.61,6.48s5.62-2.05,5.62-6.31v-15H135V24.53c0,7.84-4.43,11.76-11.41,11.76C116.44,36.29,112.19,32.37,112.19,24.7Z"/><path class="cls-1" d="M46,46H0V0H46V46ZM21.45,40.55c0,.34.68.51.85,0l1.53-12.78H19.92l1.53,12.78ZM25.2,26.92V25H18.56v1.88ZM23.32,24c8.34.34,9-7.32,9-10.22h0c-.17.68-1.37,2.73-4.43,4.09A7.38,7.38,0,0,0,23.32,24Zm-.85-.51c1.36-6.3,6.47-6.47,7-7.67.68-1.87-.68-5.28-1-5.62h-.17A11.15,11.15,0,0,1,25.54,14c-1,.85-5.45,4.26-3.07,9.54Zm-1,.34c-2.89-6,2.89-9.88,3.75-10.73.17-.17.17-.17.17-.34A15.55,15.55,0,0,0,24,7.33h-.17c-.51,1.87-3.06,4.6-3.57,5.28-4.43,5.11-3.41,8.35,1.19,11.24ZM20.26,24c-4.77-2.89-4.26-6.81-2.21-9.71V14a7.46,7.46,0,0,0-1.2-2.9c0-.17-.17-.17-.17,0,0,.86-1,2.9-2.38,5.12-1.36,2.38-1.36,7.66,6,7.83Z"/></svg><br>
+        Directory of Schools
+      </h1>
+    </header>
+
+    <main>      
+<!--       <p>Let's view some links</p> -->
+      
+ 
+      
+<!--       id, name, json -->
+      
+      <form id="edit" method="POST" action="/data" style="display:none;">
+        <div id="addschool">
+          <b>Add a school</b>
+        </div>
+        <hr>
+        <input id="id" type="hidden" name="id" />
+        <div class="schoolenter">
+        <label for="author">Author:</label>
+        <input id="author" name="author" aria-label="the author" placeholder="not required">
+        </div>
+        <hr>
+       <div class="schoolenter FULL">
+       <label for="data" class="fullname">School full name:</label>  
+        
+          
+    <script>
+    function onChange(){
+      // console.log("NYU " + document.getElementById("NamedSchools").value +" of" + document.getElementById("preDatum").value)
+      document.getElementById("name").value = "NYU " + document.getElementById("NamedSchools").value +" of " + document.getElementById("preDatum").value
+      document.getElementById("namepreview").innerHTML = document.getElementById("name").value
+      // document.getElementById("datum").value = "{\"0\":" + "\"NYU " + document.getElementById("NamedSchools").value +" of " + document.getElementById("preDatum").value + "\"}"
+      // document.getElementById("datum").value = "{\"approved\":\"false\"}"
+      document.getElementById("datum").value = "{}"
+    }
+    
+    </script>
+          
+        
+        
+        NYU
+
+         
+        
+        </div>
+                  <div id="dropdowncontainer">
+            
+         
+<select name="NamedSchools" id="NamedSchools" onchange="onChange()">
+  <option value="School">School of</option>
+  <option value="Institute">Institute of</option>
+  <option value="College">College of</option>
+  <option value="Courant Institute">Courant Institute of</option>
+  <option value="Gallatin School">Gallatin School of</option>
+  <option value="Grossman School">Grossman School of</option>
+  <option value="Leonard N. Stern School">Leonard N. Stern School of</option>
+  <option value="Robert F. Wagner Graduate School">Robert F. Wagner Graduate School of</option>
+  <option value="Rory Meyers College">Rory Meyers College of</option>
+  <option value="Silver School">Silver School of</option>
+  <option value="Steinhardt School">Steinhardt School of</option>
+  <option value="Tandon School">Tandon School of</option>
+  <option value="Tisch School">Tisch School</option>
+  <option value="Long Island School">Long Island School of</option>
+  <option value="Abu Dhabi School">Abu Dhabi School of</option>
+  <option value="Shanghai School">Shanghai School of</option>
+</select>
+             </div>
+        <textarea id="preDatum" name="PreData" aria-label="a data blob" type="text" maxlength="100" placeholder="e.g. Breathing With Your Mouth Open" oninput="onChange()" onchange="onChange()"></textarea>
+        <hr>
+        <div class="schoolenter">
+         <label for="name">Preview entry:</label>
+          
+        </div>
+        <div id="namepreview">
+          NYU School of Breathing With Your Mouth Open
+        </div>
+        <textarea id="name" name="name" aria-label="a name" type="text" maxlength="110" placeholder="NYU School of Breathing With Your Mouth Open"></textarea>
+        <textarea id="datum" name="data" aria-label="a data blob" type="text" maxlength="100" placeholder="{'0':'NYU School of Breathing With Your Mouth Open'}"></textarea>
+       <hr>
+      <button type="submit" id="submit">Expand Curriculum</button>
+      </form>  
+    
+          <section class="data-list">
+                  <div id="addcontainer">
+<!--         <a href="/">Back</a> -->
+        <a id="add" href="/?add">Add a School</a>
+<!--         <a href="/?edit">Edit</a> -->
+<!--         <a href="/?erase"> Erase all links</a> -->
+      </div>
+        <ul id="data"></ul>
+      </section>  
+    
+    </main>
+    
+
+    
+    <section id="actions">
+    
+    </section>
+
+  
+
+ 
+    
+<footer class="main-footer footer expanded" role="contentinfo">
+	<div class="footer-top-wrapper">
+		
+	</div>
+
+	<div class="footer-bottom-wrapper">
+		<div class="footer-content">
+			<div class="footer-bottom-menu">
+				<div class="highlighted-item">
+					<a href="/nyu/en.html">New York University</a>
+				</div>
+				<ul>
+					
+						
+							<li><a class="footer-navigation-bottom-menu-link" href="/content/nyu/en/students.html" target="_self">Students</a></li>
+						
+							<li><a class="footer-navigation-bottom-menu-link" href="/content/nyu/en/faculty.html" target="_self">Faculty</a></li>
+						
+							<li><a class="footer-navigation-bottom-menu-link" href="/content/nyu/en/alumni.html" target="_self">Alumni</a></li>
+						
+							<li><a class="footer-navigation-bottom-menu-link" href="/content/nyu/en/employees.html" target="_self">Employees</a></li>
+						
+							<li><a class="footer-navigation-bottom-menu-link" href="/content/nyu/en/community.html" target="_self">Community</a></li>
+						
+					
+				</ul>
+			</div>
+
+			<div class="copyright">Unless otherwise noted, all content copyright New York University. All rights reserved.</div>
+		</div>
+	</div>
+
+	<div class="feedback-form-component">
+		<div class="form-modal">
+			<div class="f-form-container">
+				<div class="f-header-container">
+					<h2 tabindex="0">Feedback</h2>
+				</div>
+
+				<div class="nyu-message">Thank you for taking the time to give us feedback. Your feedback is essential to helping us improve the website</div>
+				<div class="tab-choice">I have feedback for</div>
+
+				<ul class="tabs">
+					<li class="active">
+						<button role="tab" aria-selected="true" aria-controls="page-feedback" id="tab-page-feedback" class="ftab">
+							This Page
+						</button>
+					</li>
+					<li>
+						<button role="tab" aria-selected="false" aria-controls="overall-feedback" id="tab-overall-feedback" class="ftab">
+							Overall
+						</button>
+					</li>
+				</ul>
+
+				<div class="tab-content-container">
+					<div role="tabpanel" aria-labelledby="tab-page-feedback" id="page-feedback" class="tab-content tab-content-active">
+						
+						<form id="page-feedback-form" class="form" enctype="multipart/form-data" method="POST" action="https://www.nyu.edu/scripts/feedback/forms/process-feedback.php">
+
+							<label for="page-name" class="f-label">Name</label>
+							<input id="page-name" type="text" name="page-name">
+
+							<label for="page-email" class="f-label">Email Address</label>
+							<input id="page-email" type="text" name="page-email">
+
+							<label for="inaccurate-content" class="f-label">Note any inaccurate, missing or recommended content in this page?</label>
+							<textarea id="inaccurate-content" name="inaccurate-content" data-role="none"></textarea>
+
+							<label for="broken-links" class="f-label">Note any broken links, images, or technical features on this page?</label>
+							<textarea id="broken-links" name="broken-links" data-role="none"></textarea>
+
+							<div class="form-note">Please complete at least one field before submitting your feedback</div>
+
+							<input type="hidden" name="feedbackMode" value="page">
+							<input type="hidden" name="pageLocation" value="">
+							<input type="hidden" name="viewportSize" value="">
+							<input type="hidden" name="pagenode" value="/content/nyu/en/about">
+
+							<div class="caret-button submit-feedback">
+								<input>
+							</div>
+						</form>
+					</div>
+
+					<div role="tabpanel" aria-labelledby="tab-overall-feedback" id="overall-feedback" class="tab-content">
+						
+						<form id="overall-feedback-form" class="form" enctype="multipart/form-data" method="POST" action="https://www.nyu.edu/scripts/feedback/forms/process-feedback.php">
+
+							<label for="overall-name" class="f-label">Name</label>
+							<input id="overall-name" type="text" name="overall-name">
+
+							<label for="overall-email" class="f-label">Email Address</label>
+							<input id="overall-email" type="text" name="overall-email">
+
+							<fieldset>
+								<legend class="f-label">How would you rate the information on the website</legend>
+
+								<div class="radio-buttons">
+									<div>
+										<input type="radio" name="rating" value="helpful" id="radio-1" data-role="none">
+										<label for="radio-1">Helpful</label>
+									</div>
+									
+									<div>
+										<input type="radio" name="rating" value="somewhat" id="radio-2" data-role="none">
+										<label for="radio-2">Somewhat Helpful</label>
+									</div>
+
+									<div>
+										<input type="radio" name="rating" value="not-helpful" id="radio-3" data-role="none">
+										<label for="radio-3">Not Helpful</label>
+									</div>
+								</div>
+							</fieldset>
+
+							<fieldset>
+								<legend class="f-label">How would you rate the ease of use on this website</legend>
+
+								<div class="radio-buttons">
+									<div>
+										<input type="radio" name="difficulty" value="easy" id="radio-4" data-role="none">
+										<label for="radio-4">Easy</label>
+									</div>
+
+									<div>
+										<input type="radio" name="difficulty" value="somewhat" id="radio-5" data-role="none">
+										<label for="radio-5">Somewhat Easy</label>
+									</div>
+
+									<div>
+										<input type="radio" name="difficulty" value="difficult" id="radio-6" data-role="none">
+										<label for="radio-6">Difficult</label>
+									</div>
+								</div>
+							</fieldset>
+
+							<label for="likes" class="f-label">What do you like most about the website?</label>
+							<textarea id="likes" name="likes" data-role="none"></textarea>
+
+							<label for="dislikes" class="f-label">What do you dislike most about the website?</label>
+							<textarea id="dislikes" name="dislikes" data-role="none"></textarea>
+
+							<label for="added-functionality" class="f-label">What content/functionality would you like to see added to the website?</label>
+							<textarea id="added-functionality" name="added-functionality" data-role="none"></textarea>
+
+							<div class="form-note">Please complete at least one field before submitting your feedback</div>
+
+							<input type="hidden" name="feedbackMode" value="overall">
+							<input type="hidden" name="pageLocation" value="">
+							<input type="hidden" name="viewportSize" value="">
+
+							<div class="caret-button submit-feedback">
+								<input id="overall-feedback-submit" type="submit" value="Submit Feedback">
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="f-footer-container">
+					<hr class="divider">
+					<button type="button" class="close-button">Close</button>
+				</div>
+
+				<button type="button" class="cbutton">
+					<span class="screen-reader-text">Close Feedback Form</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</footer>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+<!--     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script> -->
+
+
+    
+  </body>
+</html>
