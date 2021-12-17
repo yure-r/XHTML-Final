@@ -21,6 +21,13 @@ The Twitter API is a bit complicated, but steps to reproduce this project with y
 
 Once that's done, replace the keys in the .env with your own access keys and the code should update accordingly.
 
+Posting tweets looks something like this: 
+
+
+https://user-images.githubusercontent.com/66575069/146494640-3f00a4aa-9b72-4440-a574-ee57031ba0c5.mov
+
+
+
 # Login
 
 Logging in can be accessed through the /login endpoint, and prompts the user to log in with credentials, once authenticated, this allows the active user to quickly edit the database entries via a user interface. The login information is stored in express-sessions and uses browser cookies to continue sessions.
